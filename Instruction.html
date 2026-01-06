@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 命令式：手动操作 DOM 每一步 -->
+    <div id="list"></div>
+    <button id="addBtn">添加项</button>
+    
+    <script>
+        // 1. 初始数据
+        const data = ["React", "Vue", "Angular"];
+        const listEl = document.getElementById("list");
+        const addBtn = document.getElementById("addBtn");
+
+        // 2. 手动渲染列表（命令式步骤：清空→循环创建→插入DOM）
+        function renderList() {
+            // 步骤1：清空原有DOM
+            listEl.innerHTML = "";
+            // 步骤2：遍历数据创建li
+            data.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                // 步骤3：插入到DOM中
+                listEl.appendChild(li);
+            });
+        }
+
+        // 3. 初始渲染
+        renderList();
+
+        // 4. 点击添加项：手动修改数据→重新渲染
+        addBtn.addEventListener("click", () => {
+            data.push("Svelte");
+            // 手动调用渲染函数，重新操作DOM
+            renderList();
+        });
+    </script>
+</body>
+</html>

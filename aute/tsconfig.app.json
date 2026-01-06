@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "types": ["vite/client"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src", "abcc.js"]
+}
+// {
+//   "compilerOptions": {
+//     "target": "ES6", // 编译目标 ES 版本
+//     "module": "ESNext", // 模块系统
+//     "moduleResolution": "NodeNext", // 模块解析方式（适配 Node.js）
+//     "jsx": "react-jsx", // 关键：React 17+ 推荐 react-jsx（自动导入 React）
+//     "strict": true, // 开启严格模式（必开，TS 核心价值）
+//     "esModuleInterop": true, // 兼容 ES 模块
+//     "skipLibCheck": true, // 跳过第三方库类型检查
+//     "forceConsistentCasingInFileNames": true,
+//     "resolveJsonModule": true, // 支持导入 JSON
+//     "baseUrl": "./", // 基础路径（配合 paths 做别名）
+//     "paths": {
+//       "@/*": [
+//         "src/*"
+//       ] // 路径别名（可选，简化导入）
+//     }
+//   },
+//   "include": [
+//     "src/**/*"
+//   ], // 要编译的文件
+//   "exclude": [
+//     "node_modules"
+//   ] // 排除的文件
+// }
